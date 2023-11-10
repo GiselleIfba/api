@@ -1,8 +1,10 @@
+import { Request, Response } from "express";
 import { GetProductRepository } from "../../services/product/GetProducts";
 
 
-export function GetProductController(){
+export function getProductController(req: Request, res: Response){
 
-    GetProductRepository()
-
+     const product = GetProductRepository()
+     return res.json({product})  
+    
 }

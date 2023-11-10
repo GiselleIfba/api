@@ -1,5 +1,6 @@
 import { Router } from "express";
-import { GetProductController } from "../controllers/product/getProducts";
+import { getProductController } from "../controllers/product/getProducts";
+
 
 export const router = Router();
 
@@ -8,7 +9,7 @@ export const router = Router();
 // rota para pegar produtos por especificos -- rota de search
 router.get("/search/value?");
 // rota para pegar todos os produtos 
-router.get("/produtos", GetProductController);
+router.get("/produtos", getProductController);
 // rota para pegar produto por id 
 router.get("/produtos/:id");
 
